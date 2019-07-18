@@ -47,6 +47,27 @@ const _ = {
       inverted[object[key]] = key;
     }
     return inverted;
+  },
+
+  findKey(object, predicate){
+    for(let key in object){
+      let value = object[key];
+      let predicateReturnValue = predicate(value);
+      if(predicateReturnValue){
+        return key;
+      }
+    }
+    return undefined;
+  },
+
+  drop(array, number){
+    if(!number){
+      number = 1;
+    }
+    for(let i = 0; i < number; i++){
+      array.shift();
+    }
+    return array;
   }
 };
 // Do not write or modify code below this line.
