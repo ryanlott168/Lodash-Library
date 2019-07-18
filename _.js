@@ -35,6 +35,10 @@ const _ = {
         return ' '.repeat(pad) + string + ' '.repeat(pad);
       }
     }
+  },
+
+  has(object, key){
+    return object.hasOwnProperty(key)? true: false;
   }
 };
 // Do not write or modify code below this line.
