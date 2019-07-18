@@ -39,6 +39,14 @@ const _ = {
 
   has(object, key){
     return object.hasOwnProperty(key)? true: false;
+  },
+
+  invert(object){
+    const inverted = {};
+    for(let key in object){
+      inverted[object[key]] = key;
+    }
+    return inverted;
   }
 };
 // Do not write or modify code below this line.
