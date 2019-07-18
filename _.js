@@ -15,11 +15,7 @@ const _ = {
       start = end;
       end = s2;
     }
-    if(number >= start && number < end){
-      return true;
-    } else{
-      return false;
-    }
+    return number >= start && number < end;
   }
 };
 // Do not write or modify code below this line.
