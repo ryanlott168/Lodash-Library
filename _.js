@@ -11,15 +11,30 @@ const _ = {
       start = 0;
     }
     if(start > end){
-      let s2 = start;
+      let temp = start;
       start = end;
-      end = s2;
+      end = temp;
     }
-    return number >= start && number < end;
+    let isInRange = start<= number && end > number;
+    return isInRange;
   },
 
   words(string){
     return string.split(' ');
+  },
+
+  pad(string, length){
+    if(string <= length){
+      return string;
+    } else {
+      let paddingAmount = length - string.length;
+      let pad = paddingAmount / 2;
+      if(paddingAmount % 2 == 1){
+        return ' '.repeat(pad) + string + ' '.repeat(pad+1);
+      } else {
+        return ' '.repeat(pad) + string + ' '.repeat(pad);
+      }
+    }
   }
 };
 // Do not write or modify code below this line.
