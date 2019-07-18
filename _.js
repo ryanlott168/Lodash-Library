@@ -16,6 +16,10 @@ const _ = {
       end = s2;
     }
     return number >= start && number < end;
+  },
+
+  words(string){
+    return string.split(' ');
   }
 };
 // Do not write or modify code below this line.
